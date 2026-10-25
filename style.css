@@ -1,0 +1,101 @@
+/* Reset & Base Layout */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+/* ERROR: Main container alignment is broken */
+.main-card {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 450px;
+    /* Bug: Scrambled layout direction */
+    display: inline-block; 
+    text-align: right; 
+}
+
+h2 {
+    color: #333333;
+    margin-bottom: 8px;
+    text-align: center;
+}
+
+.instructions {
+    font-size: 0.85rem;
+    color: #666666;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Form Styling */
+.field-group {
+    margin-bottom: 15px;
+    /* Bug: Fields display side-by-side instead of stacked */
+    display: flex;
+    flex-direction: row-reverse; 
+    align-items: center;
+    justify-content: space-between;
+}
+
+label {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: #444444;
+}
+
+input {
+    width: 60%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    outline: none;
+    transition: border 0.2s ease;
+}
+
+input:focus {
+    border-color: #007bff;
+}
+
+/* Button Styling */
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background 0.2s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* ERROR: Result box styles scrambled */
+.hidden-box {
+    display: block; /* Should be hidden by default */
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #e6fffa;
+    border: 1px solid #38b2ac;
+    border-radius: 6px;
+    text-align: center;
+}
+
+#result-text {
+    font-size: 1.2rem;
+    color: #234e52;
+}
